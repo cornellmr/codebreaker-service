@@ -1,3 +1,4 @@
+
 package us.nm.state.hsd.codebreaker.model.entity;
 import java.util.Date;
 import java.util.UUID;
