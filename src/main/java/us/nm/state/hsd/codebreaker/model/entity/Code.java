@@ -141,6 +141,17 @@ public class Code {
             
   }
   
+  public boolean isSolved() {
+    return guesses
+        .stream()
+        .anyMatch((guess) -> guess.isSolution());
+  }
+  
+  @JsonProperty("text")
+  public String getSolution() {
+    return isSolved() ? text : null;
+  }
+  
   @PostLoad
   @PostPersist
   private void updateKey() {
